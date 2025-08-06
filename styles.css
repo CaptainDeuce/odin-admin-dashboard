@@ -10,7 +10,7 @@ body {
 }
 
 .sidebar {
-    background-color: rgb(32, 145, 251);
+    background-color: rgb(56, 147, 218);
     grid-column: 1 / 2;
     padding: 40px;
 
@@ -25,8 +25,38 @@ body {
 
 .header {
     padding: 40px;
+    background-color: red;
+
+    display: grid;
+    grid-template-rows: repeat(2, 1fr);
+}
+
+.top-row {
+    display: grid;
+    grid-template-columns: 2fr 1fr;
+}
+
+.search {
+    display: flex;
+    flex-direction: column;
+}
+
+.search-bar {
+    background-color: rgb(176, 176, 176);
+    border-radius: 10px;
+    padding: 10px;
+}
+
+.bottom-row {
+    display: grid;
+    grid-template-columns: 2fr 1fr;
+}
+
+.name {
+    display: flex;
 }
 
 .main-content {
-    background-color: rgb(176, 176, 176);
+    /* background-color: rgb(176, 176, 176); */
+    background-color: yellow;
 }
