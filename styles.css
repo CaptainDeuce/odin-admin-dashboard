@@ -13,6 +13,14 @@ body {
     background-color: rgb(32, 145, 251);
     grid-column: 1 / 2;
     padding: 40px;
+
+    display: grid;
+    gap: 40px;
+}
+
+.nav-item, 
+.help-item {
+    padding-bottom: 20px;
 }
 
 .header {
