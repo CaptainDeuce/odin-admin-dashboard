@@ -3,3 +3,22 @@
     margin: 0;
     box-sizing: border-box;
 }
+
+body {
+    display: grid;
+    grid-template-columns: 1fr 4fr;
+}
+
+.sidebar {
+    background-color: rgb(32, 145, 251);
+    grid-column: 1 / 2;
+    padding: 40px;
+}
+
+.header {
+    padding: 40px;
+}
+
+.main-content {
+    background-color: rgb(176, 176, 176);
+}
