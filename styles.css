@@ -7,15 +7,17 @@
 body {
     display: grid;
     grid-template-columns: 1fr 4fr;
-    grid-template-rows: 1fr 4fr;
 }
 
 .sidebar {
     background-color: rgb(56, 147, 218);
     grid-row: 1 / 3;
     padding-left: 20px;
+    padding-top: 20px;
 
     display: grid;
+    grid-template-rows: auto 1fr 1fr;
+    gap: 40px;
 }
 
 .sidebar img {
@@ -46,7 +48,7 @@ body {
 .help-item {
     display: grid;
     grid-template-columns: 30px 1fr;
-    gap: 30px;
+    gap: 20px;
     padding: 10px;
     margin-bottom: 10px;
 }
@@ -60,18 +62,23 @@ body {
 }
 
 .header {
-    padding-top: 30px;
+    padding-top: 20px;
     padding-left: 50px;
     padding-right: 50px;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.2);
+    background-color: white;
+    z-index: 1;
 
     display: grid;
-    grid-template-rows: repeat(2, 1fr);
+    grid-template-rows: repeat(2, auto);
+    gap: 20px;
 }
 
 .top-row {
     display: grid;
     grid-template-columns: 2fr 1fr;
-    gap: 150px;
+    gap: 170px;
+    align-items: center;
 }
 
 .search {
@@ -89,12 +96,13 @@ body {
 .search-bar {
     background-color: rgb(229, 235, 238);
     border-radius: 25px;
+    height: 35px;
 }
 
 .alert {
     display: grid;
     grid-template-columns: 30px 50px 1fr;
-    gap: 40px;
+    gap: 30px;
     align-items: center;
 }
 
@@ -112,6 +120,7 @@ body {
 .bottom-row {
     display: grid;
     grid-template-columns: 2fr 1fr;
+    align-items: center;
 }
 
 .name {
@@ -158,12 +167,13 @@ button {
 
 .main-content {
     background-color: rgb(229, 235, 238);
-    padding: 35px 30px 40px 20px;
+    padding: 35px 30px 0 20px;
 
     display: grid;
-    grid-template-columns: 2fr 1fr;
+    grid-template-columns: 3fr 1fr;
     grid-template-rows: 1fr 1fr;
-    column-gap: 20px;
+    column-gap: 25px;
+    row-gap: 40px;
 }
 
 .projects {
@@ -183,39 +193,50 @@ button {
     display: grid;
     grid-template-columns: repeat(2, 1fr);
     grid-template-rows: repeat(3, 1fr);
-    gap: 30px;
+    row-gap: 30px;
+    column-gap: 30px;
 }
 
 .project {
     border-radius: 10px;
-    box-shadow: 1px 1px;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.3);
     background-color: white;
-    padding-top: 25px;
+    padding-top: 35px;
     padding-left: 20px;
     padding-bottom: 25px;
+    border-left: 8px solid rgb(232, 190, 2);
 
     display: grid;
     grid-template-columns: 1fr;
-    grid-template-rows: 1fr 23px;
-    row-gap: 10px;
+    grid-template-rows: 1fr 30px;
+    row-gap: 15px;
+    align-content: start;
 }
 
 .project-title {
     color: black;
     font-weight: 600;
     font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
-    font-size: 17px;
+    font-size: 18px;
 }
 
 .project-info {
     color: gray;
     font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
-    font-size: 14px;
+    font-size: 15px;
+    margin-right: 80px;
+}
+
+.project-icons {
+    display: flex;
+    gap: 25px;
+    justify-content: end;
+    padding-right: 25px;
 }
 
 .project img {
-    height: 23px;
-    width: 23px;
+    height: 25px;
+    width: 25px;
 }
 
 .announcements {
@@ -233,7 +254,7 @@ button {
 
 .announcements-container {
     border-radius: 10px;
-    box-shadow: 1px 1px;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.2);
     background-color: white;
     padding: 20px 30px;
 
@@ -246,6 +267,11 @@ button {
 .announcement2,
 .announcement3 {
     padding: 20px 0;
+    border-bottom: 1px solid rgb(157, 157, 157);
+}
+
+.announcement3 {
+    border-bottom: none;
 }
 
 .announcement-title {
@@ -276,7 +302,7 @@ button {
 
 .trending-container {
     border-radius: 10px;
-    box-shadow: 1px 1px;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.2);
     background-color: white;
     padding: 20px;
 
